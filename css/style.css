@@ -722,7 +722,7 @@
 }
 
 .form-checkbox {
-    padding-top: 30px;
+    padding-top: 34px;
     font-size: 12px;
     line-height: 17px;
     font-family: 'Open Sans', sans-serif;
@@ -730,25 +730,31 @@
     color: #707070;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.checkbox-tick::after {
+    content: "";
+    border: 1px solid #95989A;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 7px 12px 6px 12px;
+    margin-right:16px;
 }
 
 .checkbox-square {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    width: 24px;
-    height: 24px; /* jak można sztywno ustawić te wymiary (width i height), żeby faktycznie takie były, a po odznaczeniu chceckboxa się nie zmieniały?? */
-    border: 1px solid #95989A;
-    border-radius: 4px;
-    margin-right: 10px;
+    opacity: 0;
 }
 
-.checkbox-square:checked {
-    background: url("../assets/Checkmark.svg") no-repeat center / contain;
-    width: 24px;
-    height: 24px;
-    padding: 7px 6px 6px 6px;  /* tu w ogóle te wymiary nie działają.. */
+.checkbox-square:checked ~ .checkbox-tick::after {
+    content: url("../assets/Checkmark.svg");
+    border: 1px solid #95989A;
+    width: 12px;
+    height: 11px;
+    border-radius: 4px;
+    padding: 7px 6px 6px 6px;
+    margin-right:16px;
 }
 
 .form-button {
