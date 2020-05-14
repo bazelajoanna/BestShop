@@ -733,13 +733,17 @@
     justify-content: center;
 }
 
+.checkbox-tick {
+    display: flex;
+}
+
 .checkbox-tick::after {
     content: "";
     border: 1px solid #95989A;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 11px;
     border-radius: 4px;
-    padding: 7px 12px 6px 12px;
+    padding: 7px 6px 6px 6px;
     margin-right:16px;
 }
 
@@ -749,12 +753,6 @@
 
 .checkbox-square:checked ~ .checkbox-tick::after {
     content: url("../assets/Checkmark.svg");
-    border: 1px solid #95989A;
-    width: 12px;
-    height: 11px;
-    border-radius: 4px;
-    padding: 7px 6px 6px 6px;
-    margin-right:16px;
 }
 
 .form-button {
@@ -771,6 +769,10 @@
     height: 57px;
     padding: 20px 97px 19px 97px;
     margin: 20px 0 59px 213px;
+}
+input[type="checkbox"] {
+    width: 0;
+    height: 0
 }
 
 footer {
@@ -792,5 +794,6 @@ footer {
 
 .footer-media {
     padding-left: 20px;
+    text-decoration: none;
 }
 
